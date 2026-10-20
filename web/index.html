@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comick Flow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="logo" href="#/">
+        <span class="logo-mark">CF</span>
+        <span class="logo-text">Comick Flow</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#/" data-route="home">Accueil</a>
+        <a href="#/browse?sort=popular" data-route="browse">Catalogue</a>
+        <a href="#/library" data-route="library">Ma bibliothèque</a>
+      </nav>
+      <form id="searchForm" class="search-box" role="search">
+        <input id="searchInput" type="search" placeholder="Rechercher n'importe quel manga…" autocomplete="off" />
+        <div id="searchSuggest" class="search-suggest hidden"></div>
+      </form>
+      <label class="lang-select" title="Langue des chapitres">
+        <select id="langSelect">
+          <option value="fr,en">FR + EN</option>
+          <option value="fr">Français</option>
+          <option value="en">English</option>
+          <option value="fr,en,es-la,es,pt-br,it,de">Toutes</option>
+        </select>
+      </label>
+    </header>
+
+    <main id="view" class="view"></main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
